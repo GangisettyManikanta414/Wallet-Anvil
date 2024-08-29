@@ -22,7 +22,7 @@ class report_analysis(report_analysisTemplate):
     def refresh_data(self, data_type):
         if data_type == "transaction_trends":
           # Call the server function to get transactions data
-          transactions = anvil.server.call('get_transactions', self.user['user_fullname'])
+          transactions = anvil.server.call('get_wallet_transactions')
       
           # Organize data for plotting (example: aggregate by date and type)
           data_for_plot = {}
